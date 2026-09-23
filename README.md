@@ -6,13 +6,68 @@ transcription, no generation, no cloud. The foundation is a frozen
 **Gemma 4 E2B** audio tower; a compact question-conditioned decision head
 scores typed questions over a single shared audio encoding.
 
-## Quick start
+## Weights
+
+| what | where | size |
+|---|---|---|
+| Gemma 4 E2B base (frozen) | `hf download google/gemma-4-E2B-it` (https://huggingface.co/google/gemma-4-E2B-it) | ~10 GB |
+| monica heads + calibration + layer selection | `hf download datumsteve/monica` (https://huggingface.co/datumsteve/monica, public) | ~72 MB |
+
+## Setup
+
+Requires macOS with Apple Silicon (MPS), Python 3.12+, and the `hf` CLI
+(https://huggingface.co/cli) for weights.
 
 ```bash
-# serve (offline; all weights load from local disk)
-PYTHONPATH=src .venv/bin/python -m uvicorn monica.server:app --port 8910
+git clone https://github.com/nunez/monica && cd monica
+python3.12 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
 
-# ask
+# frozen Gemma 4 E2B base model (~10 GB, Apache-2.0)
+hf download google/gemma-4-E2B-it --local-dir data/models/gemma-4-E2B-it
+
+# trained heads + calibration + layer selection (~72 MB, public HF repo)
+hf download datumsteve/monica --include "models/*" "data/selected_layers.json" \
+  --local-dir .
+
+# offline check (needs the two downloads above; no network at runtime)
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+PYTHONPATH=src python -m pytest tests -q
+```
+
+## Running the server
+
+```bash
+./scripts/server.sh start      # uvicorn monica.server:app on 0.0.0.0:8910
+./scripts/server.sh status     # pid + live health check
+./scripts/server.sh stop
+./scripts/server.sh restart
+./scripts/server.sh log        # last 40 lines
+```
+
+Direct invocation (same thing):
+
+```bash
+PYTHONPATH=src python -m uvicorn monica.server:app --host 0.0.0.0 --port 8910
+```
+
+Environment variables:
+
+| var | default | meaning |
+|---|---|---|
+| `MONICA_HOST` / `MONICA_PORT` | `127.0.0.1` / `8910` | bind (server.sh defaults host to `0.0.0.0`) |
+| `MONICA_BASE_MODEL` | `data/models/gemma-4-E2B-it` | Gemma 4 E2B checkout |
+| `MONICA_HEAD_CKPT` | `models/head-cremad.pt` | trained heads |
+| `MONICA_CALIB` | `models/calibration.json` | temperature calibration |
+| `MONICA_DEVICE` | `mps` | `mps` or `cpu` |
+| `MONICA_MAX_AUDIO_SECONDS` | `120` | input length limit (rejected, never truncated) |
+| `MONICA_MAX_BODY_BYTES` | 64 MiB | request body limit |
+| `MONICA_MAX_FILE_BYTES` | 256 MiB | file-path input limit |
+| `MONICA_TARGET_SR` | `16000` | internal sample rate |
+
+## Query
+
+```bash
 curl -s localhost:8910/v1/systemone -H 'content-type: application/json' -d '{
   "model": "monica/gemma4-e2b-systemone-v1",
   "state": {"audio": "data:audio/wav;base64,<...>"},
@@ -28,9 +83,11 @@ curl -s localhost:8910/v1/systemone -H 'content-type: application/json' -d '{
 }'
 ```
 
-`state.audio` is a base64 WAV data URL **or** a local file path. Any number of
-questions (0–64) can be attached; the audio is encoded exactly once per
-request regardless of question count.
+`state.audio` is a base64 WAV data URL **or** a local file path on the server
+(`file:///path/to.wav` or `/path/to.wav`). WAV: any sample rate (HQ-resampled
+to 16 kHz), mono/stereo (mixed down), PCM 8/16/24-bit, float 32/64. 0–64
+questions per request; the audio is encoded exactly once per request regardless
+of question count.
 
 ### Response shape
 
