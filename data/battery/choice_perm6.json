@@ -1,0 +1,86 @@
+[
+ {
+  "panel": [
+   "happy",
+   "angry",
+   "neutral",
+   "sadness"
+  ],
+  "descriptions": {
+   "happy": "Happiness or enjoyment is expressed",
+   "angry": "Anger or hostility is expressed",
+   "neutral": "No strong emotion is expressed",
+   "sadness": "Sadness or dejection is expressed"
+  }
+ },
+ {
+  "panel": [
+   "happy",
+   "neutral",
+   "angry",
+   "sadness"
+  ],
+  "descriptions": {
+   "happy": "Happiness or enjoyment is expressed",
+   "neutral": "No strong emotion is expressed",
+   "angry": "Anger or hostility is expressed",
+   "sadness": "Sadness or dejection is expressed"
+  }
+ },
+ {
+  "panel": [
+   "happy",
+   "neutral",
+   "angry",
+   "sadness"
+  ],
+  "descriptions": {
+   "happy": "Happiness or enjoyment is expressed",
+   "neutral": "No strong emotion is expressed",
+   "angry": "Anger or hostility is expressed",
+   "sadness": "Sadness or dejection is expressed"
+  }
+ },
+ {
+  "panel": [
+   "sadness",
+   "happy",
+   "angry",
+   "neutral"
+  ],
+  "descriptions": {
+   "sadness": "Sadness or dejection is expressed",
+   "happy": "Happiness or enjoyment is expressed",
+   "angry": "Anger or hostility is expressed",
+   "neutral": "No strong emotion is expressed"
+  }
+ },
+ {
+  "panel": [
+   "sadness",
+   "angry",
+   "neutral",
+   "happy"
+  ],
+  "descriptions": {
+   "sadness": "Sadness or dejection is expressed",
+   "angry": "Anger or hostility is expressed",
+   "neutral": "No strong emotion is expressed",
+   "happy": "Happiness or enjoyment is expressed"
+  }
+ },
+ {
+  "panel": [
+   "sadness",
+   "happy",
+   "neutral",
+   "angry"
+  ],
+  "descriptions": {
+   "sadness": "Sadness or dejection is expressed",
+   "happy": "Happiness or enjoyment is expressed",
+   "neutral": "No strong emotion is expressed",
+   "angry": "Anger or hostility is expressed"
+  }
+ }
+]

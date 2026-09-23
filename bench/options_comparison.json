@@ -1,0 +1,20 @@
+{
+  "questions": 10,
+  "max_len": 96,
+  "option1_compact": {
+    "params_M": 407.6,
+    "encode_ms_10q": 0.78,
+    "note": "embedding table lookup + 2-layer projector; deployed"
+  },
+  "option2_text_trunk": {
+    "params_M": 4628.6,
+    "encode_ms_10q": 381.76,
+    "note": "language-model prefill only (no generation); pooled last hidden"
+  },
+  "audio_tower": {
+    "params_M": 304.8,
+    "encode_ms_10s": 65.06,
+    "note": "Gemma 4 audio tower, once per request regardless of question count"
+  },
+  "recommendation": "option1: question encoding is ~489x cheaper than the text trunk and accuracy parity was measured at calibration time; option2 remains available for gating experiments."
+}

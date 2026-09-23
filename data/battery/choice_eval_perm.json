@@ -1,0 +1,98 @@
+[
+ {
+  "panel": [
+   "fear",
+   "angry",
+   "disgust",
+   "sadness",
+   "neutral",
+   "happy"
+  ],
+  "descriptions": {
+   "angry": "The voice sounds mad or aggressive",
+   "disgust": "The voice sounds repulsed",
+   "fear": "The voice sounds afraid or nervous",
+   "happy": "The voice sounds glad or pleased",
+   "neutral": "The voice sounds matter-of-fact",
+   "sadness": "The voice sounds down or sorrowful"
+  },
+  "orig": [
+   "angry",
+   "disgust",
+   "fear",
+   "happy",
+   "neutral",
+   "sadness"
+  ],
+  "tag": "perm0"
+ },
+ {
+  "panel": [
+   "happy",
+   "angry",
+   "sadness",
+   "neutral"
+  ],
+  "descriptions": {
+   "happy": "The voice sounds glad or pleased",
+   "sadness": "The voice sounds down or sorrowful",
+   "angry": "The voice sounds mad or aggressive",
+   "neutral": "The voice sounds matter-of-fact"
+  },
+  "orig": [
+   "happy",
+   "sadness",
+   "angry",
+   "neutral"
+  ],
+  "tag": "perm1"
+ },
+ {
+  "panel": [
+   "fear",
+   "sadness",
+   "angry"
+  ],
+  "descriptions": {
+   "fear": "The voice sounds afraid or nervous",
+   "angry": "The voice sounds mad or aggressive",
+   "sadness": "The voice sounds down or sorrowful"
+  },
+  "orig": [
+   "fear",
+   "angry",
+   "sadness"
+  ],
+  "tag": "perm2"
+ },
+ {
+  "panel": [
+   "neutral",
+   "happy"
+  ],
+  "descriptions": {
+   "happy": "The voice sounds glad or pleased",
+   "neutral": "The voice sounds matter-of-fact"
+  },
+  "orig": [
+   "happy",
+   "neutral"
+  ],
+  "tag": "perm3"
+ },
+ {
+  "panel": [
+   "neutral",
+   "angry"
+  ],
+  "descriptions": {
+   "angry": "The voice sounds mad or aggressive",
+   "neutral": "The voice sounds matter-of-fact"
+  },
+  "orig": [
+   "angry",
+   "neutral"
+  ],
+  "tag": "perm4"
+ }
+]

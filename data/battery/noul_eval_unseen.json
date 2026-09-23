@@ -1,0 +1,248 @@
+[
+ {
+  "text": "Is there any sign of relieved in the way the speaker sounds?",
+  "true_emotions": [
+   "happy",
+   "neutral"
+  ],
+  "word": "relieved",
+  "template": "Is there any sign of {w} in the way the speaker sounds?"
+ },
+ {
+  "text": "Does the speaker's voice come across as relieved?",
+  "true_emotions": [
+   "happy",
+   "neutral"
+  ],
+  "word": "relieved",
+  "template": "Does the speaker's voice come across as {w}?"
+ },
+ {
+  "text": "Would you say the speaker sounds relieved?",
+  "true_emotions": [
+   "happy",
+   "neutral"
+  ],
+  "word": "relieved",
+  "template": "Would you say the speaker sounds {w}?"
+ },
+ {
+  "text": "Is there any sign of anxious in the way the speaker sounds?",
+  "true_emotions": [
+   "fear"
+  ],
+  "word": "anxious",
+  "template": "Is there any sign of {w} in the way the speaker sounds?"
+ },
+ {
+  "text": "Does the speaker's voice come across as anxious?",
+  "true_emotions": [
+   "fear"
+  ],
+  "word": "anxious",
+  "template": "Does the speaker's voice come across as {w}?"
+ },
+ {
+  "text": "Would you say the speaker sounds anxious?",
+  "true_emotions": [
+   "fear"
+  ],
+  "word": "anxious",
+  "template": "Would you say the speaker sounds {w}?"
+ },
+ {
+  "text": "Is there any sign of excited in the way the speaker sounds?",
+  "true_emotions": [
+   "happy"
+  ],
+  "word": "excited",
+  "template": "Is there any sign of {w} in the way the speaker sounds?"
+ },
+ {
+  "text": "Does the speaker's voice come across as excited?",
+  "true_emotions": [
+   "happy"
+  ],
+  "word": "excited",
+  "template": "Does the speaker's voice come across as {w}?"
+ },
+ {
+  "text": "Would you say the speaker sounds excited?",
+  "true_emotions": [
+   "happy"
+  ],
+  "word": "excited",
+  "template": "Would you say the speaker sounds {w}?"
+ },
+ {
+  "text": "Is there any sign of gloomy in the way the speaker sounds?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "word": "gloomy",
+  "template": "Is there any sign of {w} in the way the speaker sounds?"
+ },
+ {
+  "text": "Does the speaker's voice come across as gloomy?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "word": "gloomy",
+  "template": "Does the speaker's voice come across as {w}?"
+ },
+ {
+  "text": "Would you say the speaker sounds gloomy?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "word": "gloomy",
+  "template": "Would you say the speaker sounds {w}?"
+ },
+ {
+  "text": "Is there any sign of contemptuous in the way the speaker sounds?",
+  "true_emotions": [
+   "disgust"
+  ],
+  "word": "contemptuous",
+  "template": "Is there any sign of {w} in the way the speaker sounds?"
+ },
+ {
+  "text": "Does the speaker's voice come across as contemptuous?",
+  "true_emotions": [
+   "disgust"
+  ],
+  "word": "contemptuous",
+  "template": "Does the speaker's voice come across as {w}?"
+ },
+ {
+  "text": "Would you say the speaker sounds contemptuous?",
+  "true_emotions": [
+   "disgust"
+  ],
+  "word": "contemptuous",
+  "template": "Would you say the speaker sounds {w}?"
+ },
+ {
+  "text": "Is there any sign of content in the way the speaker sounds?",
+  "true_emotions": [
+   "happy",
+   "neutral"
+  ],
+  "word": "content",
+  "template": "Is there any sign of {w} in the way the speaker sounds?"
+ },
+ {
+  "text": "Does the speaker's voice come across as content?",
+  "true_emotions": [
+   "happy",
+   "neutral"
+  ],
+  "word": "content",
+  "template": "Does the speaker's voice come across as {w}?"
+ },
+ {
+  "text": "Would you say the speaker sounds content?",
+  "true_emotions": [
+   "happy",
+   "neutral"
+  ],
+  "word": "content",
+  "template": "Would you say the speaker sounds {w}?"
+ },
+ {
+  "text": "Is there any sign of frightened in the way the speaker sounds?",
+  "true_emotions": [
+   "fear"
+  ],
+  "word": "frightened",
+  "template": "Is there any sign of {w} in the way the speaker sounds?"
+ },
+ {
+  "text": "Does the speaker's voice come across as frightened?",
+  "true_emotions": [
+   "fear"
+  ],
+  "word": "frightened",
+  "template": "Does the speaker's voice come across as {w}?"
+ },
+ {
+  "text": "Would you say the speaker sounds frightened?",
+  "true_emotions": [
+   "fear"
+  ],
+  "word": "frightened",
+  "template": "Would you say the speaker sounds {w}?"
+ },
+ {
+  "text": "Is there any sign of pleased in the way the speaker sounds?",
+  "true_emotions": [
+   "happy"
+  ],
+  "word": "pleased",
+  "template": "Is there any sign of {w} in the way the speaker sounds?"
+ },
+ {
+  "text": "Does the speaker's voice come across as pleased?",
+  "true_emotions": [
+   "happy"
+  ],
+  "word": "pleased",
+  "template": "Does the speaker's voice come across as {w}?"
+ },
+ {
+  "text": "Would you say the speaker sounds pleased?",
+  "true_emotions": [
+   "happy"
+  ],
+  "word": "pleased",
+  "template": "Would you say the speaker sounds {w}?"
+ },
+ {
+  "text": "Is there any sign of calm in the way the speaker sounds?",
+  "true_emotions": [
+   "calm"
+  ],
+  "word": "calm",
+  "template": "Is there any sign of {w} in the way the speaker sounds?"
+ },
+ {
+  "text": "Does the speaker's voice come across as calm?",
+  "true_emotions": [
+   "calm"
+  ],
+  "word": "calm",
+  "template": "Does the speaker's voice come across as {w}?"
+ },
+ {
+  "text": "Would you say the speaker sounds calm?",
+  "true_emotions": [
+   "calm"
+  ],
+  "word": "calm",
+  "template": "Would you say the speaker sounds {w}?"
+ },
+ {
+  "text": "Is there any sign of surprised in the way the speaker sounds?",
+  "true_emotions": [
+   "surprise"
+  ],
+  "word": "surprised",
+  "template": "Is there any sign of {w} in the way the speaker sounds?"
+ },
+ {
+  "text": "Does the speaker's voice come across as surprised?",
+  "true_emotions": [
+   "surprise"
+  ],
+  "word": "surprised",
+  "template": "Does the speaker's voice come across as {w}?"
+ },
+ {
+  "text": "Would you say the speaker sounds surprised?",
+  "true_emotions": [
+   "surprise"
+  ],
+  "word": "surprised",
+  "template": "Would you say the speaker sounds {w}?"
+ }
+]

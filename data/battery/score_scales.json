@@ -1,0 +1,108 @@
+{
+ "train": {
+  "frustrated": {
+   "map": {
+    "angry": 4.0,
+    "disgust": 2.0,
+    "fear": 3.0,
+    "happy": 2.5,
+    "sadness": 1.0,
+    "neutral": 0.5
+   },
+   "levels": [
+    "not frustrated",
+    "slightly frustrated",
+    "moderately frustrated",
+    "very frustrated",
+    "extremely frustrated"
+   ]
+  },
+  "intense": {
+   "map": {
+    "angry": 4.0,
+    "disgust": 2.5,
+    "fear": 3.5,
+    "happy": 3.0,
+    "sadness": 1.5,
+    "neutral": 0.5
+   },
+   "levels": [
+    "not intense",
+    "slightly intense",
+    "moderately intense",
+    "very intense",
+    "extremely intense"
+   ]
+  },
+  "energetic": {
+   "map": {
+    "angry": 3.5,
+    "disgust": 2.0,
+    "fear": 3.0,
+    "happy": 4.0,
+    "sadness": 1.0,
+    "neutral": 0.5
+   },
+   "levels": [
+    "not energetic",
+    "slightly energetic",
+    "moderately energetic",
+    "very energetic",
+    "extremely energetic"
+   ]
+  },
+  "agitated": {
+   "map": {
+    "angry": 4.0,
+    "disgust": 2.5,
+    "fear": 3.5,
+    "happy": 2.0,
+    "sadness": 1.0,
+    "neutral": 0.5
+   },
+   "levels": [
+    "not agitated",
+    "slightly agitated",
+    "moderately agitated",
+    "very agitated",
+    "extremely agitated"
+   ]
+  }
+ },
+ "eval": {
+  "strained": {
+   "map": {
+    "angry": 4.0,
+    "disgust": 2.5,
+    "fear": 3.5,
+    "happy": 2.0,
+    "sadness": 1.0,
+    "neutral": 0.5
+   },
+   "levels": [
+    "not strained",
+    "slightly strained",
+    "somewhat strained",
+    "quite strained",
+    "very strained"
+   ]
+  },
+  "tense": {
+   "map": {
+    "angry": 3.5,
+    "disgust": 2.0,
+    "fear": 4.0,
+    "happy": 1.5,
+    "sadness": 1.0,
+    "neutral": 0.5
+   },
+   "levels": [
+    "not tense",
+    "a little tense",
+    "somewhat tense",
+    "quite tense",
+    "very tense"
+   ]
+  }
+ }
+}

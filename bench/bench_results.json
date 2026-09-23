@@ -1,0 +1,120 @@
+{
+  "machine": {
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.12",
+    "torch": "2.14.0",
+    "device": "mps"
+  },
+  "files": {
+    "base_model": {
+      "path": "data/models/gemma-4-E2B-it",
+      "bytes": 10278802848
+    },
+    "head_checkpoint": {
+      "path": "models/head-cremad.pt",
+      "bytes": 72008998
+    },
+    "calibration": {
+      "path": "models/calibration.json",
+      "bytes": 130
+    }
+  },
+  "cold_start": {
+    "model_load_s": 6.4,
+    "warmup_s": 0.37,
+    "total_s": 6.77
+  },
+  "audio": {
+    "source": "bench/ref.wav",
+    "source_seconds": 2.64
+  },
+  "latency_grid": {
+    "3s_1q": {
+      "min_ms": 112.1,
+      "median_ms": 118.7,
+      "p95_ms": 178.6,
+      "encode_ms_median": 119,
+      "score_ms_median": 6,
+      "rtf": 0.0396
+    },
+    "3s_10q": {
+      "min_ms": 139.4,
+      "median_ms": 150.6,
+      "p95_ms": 335.8,
+      "encode_ms_median": 123,
+      "score_ms_median": 23,
+      "rtf": 0.0502
+    },
+    "3s_32q": {
+      "min_ms": 165.5,
+      "median_ms": 174.7,
+      "p95_ms": 204.2,
+      "encode_ms_median": 118,
+      "score_ms_median": 51,
+      "rtf": 0.0582
+    },
+    "10s_1q": {
+      "min_ms": 127.9,
+      "median_ms": 136.0,
+      "p95_ms": 138.6,
+      "encode_ms_median": 124,
+      "score_ms_median": 7,
+      "rtf": 0.0136
+    },
+    "10s_10q": {
+      "min_ms": 61.0,
+      "median_ms": 76.9,
+      "p95_ms": 141.4,
+      "encode_ms_median": 56,
+      "score_ms_median": 8,
+      "rtf": 0.0077
+    },
+    "10s_32q": {
+      "min_ms": 90.3,
+      "median_ms": 93.6,
+      "p95_ms": 96.6,
+      "encode_ms_median": 66,
+      "score_ms_median": 18,
+      "rtf": 0.0094
+    },
+    "30s_1q": {
+      "min_ms": 150.1,
+      "median_ms": 157.6,
+      "p95_ms": 191.3,
+      "encode_ms_median": 117,
+      "score_ms_median": 3,
+      "rtf": 0.0053
+    },
+    "30s_10q": {
+      "min_ms": 162.0,
+      "median_ms": 165.6,
+      "p95_ms": 168.1,
+      "encode_ms_median": 121,
+      "score_ms_median": 10,
+      "rtf": 0.0055
+    },
+    "30s_32q": {
+      "min_ms": 173.4,
+      "median_ms": 179.7,
+      "p95_ms": 182.5,
+      "encode_ms_median": 121,
+      "score_ms_median": 22,
+      "rtf": 0.006
+    }
+  },
+  "encoding_amortization": {
+    "audio_seconds": 30.0,
+    "encode_ms_by_request": {
+      "1q": 117,
+      "10q": 121,
+      "32q": 121
+    },
+    "audio_encoder_calls_per_request": 1,
+    "generated_tokens": 0
+  },
+  "memory": {
+    "peak_rss_bytes": 3108126720,
+    "peak_rss_gb": 3.11
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "meta": {
+    "ckpt_meta": {
+      "layer_ids": [
+        3,
+        4,
+        9,
+        10
+      ],
+      "n_windows": 20,
+      "d_q": 512,
+      "d_h": 512,
+      "emotions": [
+        "angry",
+        "disgust",
+        "fear",
+        "happy",
+        "neutral",
+        "sadness"
+      ],
+      "created": "2026-09-23T07:47:57",
+      "epoch": 19,
+      "val": {
+        "loss": 3.5540202617645265,
+        "noul_acc": 0.9015199493350222,
+        "choice_acc": 0.7725752508361204,
+        "score_mae": 0.4980047472373378
+      },
+      "composite": 0.8447
+    },
+    "calibrated": true
+  },
+  "noul_test_seen": {
+    "n": 151360,
+    "acc": 0.8731,
+    "brier": 0.1014,
+    "ece": 0.0694,
+    "auc": 0.8501,
+    "per_word_positive": {
+      "angry": 0.309,
+      "hostile": 0.309,
+      "furious": 0.308,
+      "irritated": 0.309,
+      "disgusted": 0.393,
+      "repulsed": 0.39,
+      "revolted": 0.391,
+      "fearful": 0.446,
+      "afraid": 0.448,
+      "scared": 0.446,
+      "terrified": 0.444,
+      "happy": 0.569,
+      "joyful": 0.568,
+      "cheerful": 0.569,
+      "glad": 0.569,
+      "neutral": 0.658,
+      "flat": 0.66,
+      "unemotional": 0.658,
+      "sad": 0.522,
+      "unhappy": 0.516,
+      "sorrowful": 0.529,
+      "dejected": 0.526
+    }
+  },
+  "noul_test_unseen_words": {
+    "n": 41280,
+    "acc": 0.8392,
+    "brier": 0.1248,
+    "ece": 0.0373,
+    "auc": 0.8035,
+    "per_word_positive": {
+      "relieved": 0.414,
+      "anxious": 0.38,
+      "excited": 0.374,
+      "gloomy": 0.421,
+      "contemptuous": 0.335,
+      "content": 0.301,
+      "frightened": 0.43,
+      "pleased": 0.569
+    }
+  },
+  "choice_test": {
+    "n": 3440,
+    "acc": 0.5913,
+    "macro_f1": 0.5841,
+    "nll": 1.3516,
+    "brier": 0.6041,
+    "ece": 0.1014
+  },
+  "choice_order_stability": {
+    "n_orders": 7,
+    "mean_max_prob_delta": 0.0,
+    "mean_js": 0.0,
+    "argmax_agreement": 1.0
+  },
+  "score_test_train_scales": {
+    "frustrated": {
+      "n": 1720,
+      "level_mae": 0.504,
+      "level_rmse": 0.823,
+      "rps": 0.4203,
+      "ece_argmax": 0.1007
+    },
+    "intense": {
+      "n": 1720,
+      "level_mae": 0.546,
+      "level_rmse": 0.82,
+      "rps": 0.4788,
+      "ece_argmax": 0.0681
+    },
+    "energetic": {
+      "n": 1720,
+      "level_mae": 0.926,
+      "level_rmse": 1.228,
+      "rps": 0.721,
+      "ece_argmax": 0.0816
+    },
+    "agitated": {
+      "n": 1720,
+      "level_mae": 0.623,
+      "level_rmse": 0.903,
+      "rps": 0.4968,
+      "ece_argmax": 0.0671
+    }
+  },
+  "score_test_eval_scales": {
+    "strained": {
+      "n": 1720,
+      "level_mae": 0.923,
+      "level_rmse": 1.119,
+      "rps": 0.7685,
+      "ece_argmax": 0.1594
+    },
+    "tense": {
+      "n": 1720,
+      "level_mae": 1.126,
+      "level_rmse": 1.269,
+      "rps": 0.8009,
+      "ece_argmax": 0.129
+    }
+  },
+  "packed_vs_separate": {
+    "n_clips": 150,
+    "choice": {
+      "max_prob_delta": 9.5367431640625e-07,
+      "mean_prob_delta": 3.998478437239328e-09,
+      "argmax_agreement": 1.0,
+      "js_divergence": 4.832941824517434e-10
+    },
+    "noul": {
+      "max_abs_delta": 0.0,
+      "mean_abs_delta": 0.0,
+      "sign_flip_rate": 0.0
+    }
+  },
+  "robustness": {
+    "babble_10": {
+      "n": 8,
+      "low_info_rate": 0.0,
+      "music_rate": 0.0,
+      "max_noul_scored": 0.329,
+      "max_choice_conf": 0.268
+    },
+    "babble_20": {
+      "n": 8,
+      "low_info_rate": 0.0,
+      "music_rate": 0.0,
+      "max_noul_scored": 0.257,
+      "max_choice_conf": 0.505
+    },
+    "babble_5": {
+      "n": 8,
+      "low_info_rate": 0.0,
+      "music_rate": 0.0,
+      "max_noul_scored": 0.329,
+      "max_choice_conf": 0.6
+    },
+    "clipped": {
+      "n": 8,
+      "low_info_rate": 0.25,
+      "music_rate": 0.0,
+      "max_noul_scored": 0.5,
+      "max_choice_conf": 0.719
+    },
+    "music": {
+      "n": 1,
+      "low_info_rate": 1.0,
+      "music_rate": 1.0,
+      "max_noul_scored": 0.5,
+      "max_choice_conf": 0.0
+    },
+    "phone_band": {
+      "n": 8,
+      "low_info_rate": 0.0,
+      "music_rate": 0.0,
+      "max_noul_scored": 0.407,
+      "max_choice_conf": 0.433
+    },
+    "short_0.4s": {
+      "n": 8,
+      "low_info_rate": 1.0,
+      "music_rate": 0.0,
+      "max_noul_scored": 0.5,
+      "max_choice_conf": 0.0
+    },
+    "silence": {
+      "n": 8,
+      "low_info_rate": 1.0,
+      "music_rate": 0.0,
+      "max_noul_scored": 0.5,
+      "max_choice_conf": 0.0
+    }
+  },
+  "audio_formats": {
+    "mean_abs_prob_delta_by_variant": {
+      "stereo16_noul": 0.0,
+      "stereo16_dist": 0.0,
+      "sr48k_noul": 0.0541,
+      "sr48k_dist": 0.04793,
+      "sr22k_noul": 0.04683,
+      "sr22k_dist": 0.04913,
+      "sr8k_noul": 0.09654,
+      "sr8k_dist": 0.03445,
+      "mono24_noul": 0.0,
+      "mono24_dist": 0.0,
+      "float_noul": 0.0,
+      "float_dist": 0.0
+    },
+    "n_clips": 6
+  },
+  "repetition_stability": {
+    "max_abs_delta_identical_input": 0.0
+  },
+  "latency": {
+    "audio_encode_ms": {
+      "3.0": {
+        "n": 5,
+        "mean_ms": 53.0,
+        "median_ms": 49.6,
+        "p90_ms": 59.9,
+        "p99_ms": 65.7,
+        "min_ms": 49.2,
+        "max_ms": 66.4
+      },
+      "10.0": {
+        "n": 5,
+        "mean_ms": 75.5,
+        "median_ms": 60.2,
+        "p90_ms": 106.6,
+        "p99_ms": 134.3,
+        "min_ms": 59.8,
+        "max_ms": 137.4
+      },
+      "30.0": {
+        "n": 5,
+        "mean_ms": 95.6,
+        "median_ms": 89.8,
+        "p90_ms": 107.4,
+        "p99_ms": 117.9,
+        "min_ms": 89.4,
+        "max_ms": 119.0
+      }
+    },
+    "audio_seconds": [
+      3.0,
+      10.0,
+      30.0
+    ],
+    "rtf_encode": {
+      "3.0": 0.0177,
+      "10.0": 0.0076,
+      "30.0": 0.0032
+    },
+    "scoring_ms": {
+      "q1": {
+        "n": 15,
+        "mean_ms": 2.1,
+        "median_ms": 1.9,
+        "p90_ms": 2.8,
+        "p99_ms": 2.9,
+        "min_ms": 1.8,
+        "max_ms": 2.9
+      },
+      "q10": {
+        "n": 15,
+        "mean_ms": 5.6,
+        "median_ms": 5.4,
+        "p90_ms": 6.3,
+        "p99_ms": 6.6,
+        "min_ms": 5.2,
+        "max_ms": 6.6
+      },
+      "q32": {
+        "n": 15,
+        "mean_ms": 36.0,
+        "median_ms": 45.3,
+        "p90_ms": 52.0,
+        "p99_ms": 53.0,
+        "min_ms": 14.0,
+        "max_ms": 53.1
+      }
+    }
+  },
+  "ravdess_unseen_words": {
+    "n": 4032,
+    "acc": 0.8316,
+    "brier": 0.1491,
+    "ece": 0.1337,
+    "auc": 0.396,
+    "per_word_positive": {
+      "calm": 0.112,
+      "surprised": null
+    }
+  }
+}

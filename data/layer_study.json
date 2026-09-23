@@ -1,0 +1,108 @@
+{
+  "per_layer": [
+    {
+      "layer": 0,
+      "acc_mean": 0.2593,
+      "acc_mean_std": 0.2593
+    },
+    {
+      "layer": 1,
+      "acc_mean": 0.222,
+      "acc_mean_std": 0.222
+    },
+    {
+      "layer": 2,
+      "acc_mean": 0.3068,
+      "acc_mean_std": 0.2729
+    },
+    {
+      "layer": 3,
+      "acc_mean": 0.5458,
+      "acc_mean_std": 0.3508
+    },
+    {
+      "layer": 4,
+      "acc_mean": 0.6153,
+      "acc_mean_std": 0.4881
+    },
+    {
+      "layer": 5,
+      "acc_mean": 0.2627,
+      "acc_mean_std": 0.2593
+    },
+    {
+      "layer": 6,
+      "acc_mean": 0.4305,
+      "acc_mean_std": 0.2593
+    },
+    {
+      "layer": 7,
+      "acc_mean": 0.2593,
+      "acc_mean_std": 0.2593
+    },
+    {
+      "layer": 8,
+      "acc_mean": 0.2593,
+      "acc_mean_std": 0.2593
+    },
+    {
+      "layer": 9,
+      "acc_mean": 0.6068,
+      "acc_mean_std": 0.4458
+    },
+    {
+      "layer": 10,
+      "acc_mean": 0.3644,
+      "acc_mean_std": 0.3746
+    },
+    {
+      "layer": 11,
+      "acc_mean": 0.5847,
+      "acc_mean_std": 0.2729
+    },
+    {
+      "layer": "final_proj",
+      "acc_mean": 0.7424,
+      "acc_mean_std": 0.3407
+    }
+  ],
+  "ranking": [
+    {
+      "layer": 4,
+      "acc_mean": 0.6153,
+      "acc_mean_std": 0.4881
+    },
+    {
+      "layer": 9,
+      "acc_mean": 0.6068,
+      "acc_mean_std": 0.4458
+    },
+    {
+      "layer": 10,
+      "acc_mean": 0.3644,
+      "acc_mean_std": 0.3746
+    },
+    {
+      "layer": 3,
+      "acc_mean": 0.5458,
+      "acc_mean_std": 0.3508
+    },
+    {
+      "layer": "final_proj",
+      "acc_mean": 0.7424,
+      "acc_mean_std": 0.3407
+    },
+    {
+      "layer": 2,
+      "acc_mean": 0.3068,
+      "acc_mean_std": 0.2729
+    }
+  ],
+  "recommended_layers": [
+    3,
+    4,
+    9,
+    10
+  ],
+  "note": "probe accuracy of time-pooled layer statistics; higher layers carry more emotion-aligned signal"
+}

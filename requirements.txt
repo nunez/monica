@@ -1,0 +1,12 @@
+# monica
+
+torch>=2.7
+torchaudio>=2.7
+transformers>=5.17
+numpy
+soundfile
+soxr
+fastapi
+uvicorn[standard]
+pytest
+httpx

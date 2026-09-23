@@ -1,0 +1,794 @@
+[
+ {
+  "text": "Does the speaker sound angry?",
+  "true_emotions": [
+   "angry"
+  ],
+  "emotion": "angry",
+  "word": "angry",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing angry?",
+  "true_emotions": [
+   "angry"
+  ],
+  "emotion": "angry",
+  "word": "angry",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey angry?",
+  "true_emotions": [
+   "angry"
+  ],
+  "emotion": "angry",
+  "word": "angry",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound angry?",
+  "true_emotions": [
+   "angry"
+  ],
+  "emotion": "angry",
+  "word": "angry",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound hostile?",
+  "true_emotions": [
+   "angry"
+  ],
+  "emotion": "angry",
+  "word": "hostile",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing hostile?",
+  "true_emotions": [
+   "angry"
+  ],
+  "emotion": "angry",
+  "word": "hostile",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey hostile?",
+  "true_emotions": [
+   "angry"
+  ],
+  "emotion": "angry",
+  "word": "hostile",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound hostile?",
+  "true_emotions": [
+   "angry"
+  ],
+  "emotion": "angry",
+  "word": "hostile",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound furious?",
+  "true_emotions": [
+   "angry"
+  ],
+  "emotion": "angry",
+  "word": "furious",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing furious?",
+  "true_emotions": [
+   "angry"
+  ],
+  "emotion": "angry",
+  "word": "furious",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey furious?",
+  "true_emotions": [
+   "angry"
+  ],
+  "emotion": "angry",
+  "word": "furious",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound furious?",
+  "true_emotions": [
+   "angry"
+  ],
+  "emotion": "angry",
+  "word": "furious",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound irritated?",
+  "true_emotions": [
+   "angry"
+  ],
+  "emotion": "angry",
+  "word": "irritated",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing irritated?",
+  "true_emotions": [
+   "angry"
+  ],
+  "emotion": "angry",
+  "word": "irritated",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey irritated?",
+  "true_emotions": [
+   "angry"
+  ],
+  "emotion": "angry",
+  "word": "irritated",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound irritated?",
+  "true_emotions": [
+   "angry"
+  ],
+  "emotion": "angry",
+  "word": "irritated",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound disgusted?",
+  "true_emotions": [
+   "disgust"
+  ],
+  "emotion": "disgust",
+  "word": "disgusted",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing disgusted?",
+  "true_emotions": [
+   "disgust"
+  ],
+  "emotion": "disgust",
+  "word": "disgusted",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey disgusted?",
+  "true_emotions": [
+   "disgust"
+  ],
+  "emotion": "disgust",
+  "word": "disgusted",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound disgusted?",
+  "true_emotions": [
+   "disgust"
+  ],
+  "emotion": "disgust",
+  "word": "disgusted",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound repulsed?",
+  "true_emotions": [
+   "disgust"
+  ],
+  "emotion": "disgust",
+  "word": "repulsed",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing repulsed?",
+  "true_emotions": [
+   "disgust"
+  ],
+  "emotion": "disgust",
+  "word": "repulsed",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey repulsed?",
+  "true_emotions": [
+   "disgust"
+  ],
+  "emotion": "disgust",
+  "word": "repulsed",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound repulsed?",
+  "true_emotions": [
+   "disgust"
+  ],
+  "emotion": "disgust",
+  "word": "repulsed",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound revolted?",
+  "true_emotions": [
+   "disgust"
+  ],
+  "emotion": "disgust",
+  "word": "revolted",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing revolted?",
+  "true_emotions": [
+   "disgust"
+  ],
+  "emotion": "disgust",
+  "word": "revolted",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey revolted?",
+  "true_emotions": [
+   "disgust"
+  ],
+  "emotion": "disgust",
+  "word": "revolted",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound revolted?",
+  "true_emotions": [
+   "disgust"
+  ],
+  "emotion": "disgust",
+  "word": "revolted",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound fearful?",
+  "true_emotions": [
+   "fear"
+  ],
+  "emotion": "fear",
+  "word": "fearful",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing fearful?",
+  "true_emotions": [
+   "fear"
+  ],
+  "emotion": "fear",
+  "word": "fearful",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey fearful?",
+  "true_emotions": [
+   "fear"
+  ],
+  "emotion": "fear",
+  "word": "fearful",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound fearful?",
+  "true_emotions": [
+   "fear"
+  ],
+  "emotion": "fear",
+  "word": "fearful",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound afraid?",
+  "true_emotions": [
+   "fear"
+  ],
+  "emotion": "fear",
+  "word": "afraid",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing afraid?",
+  "true_emotions": [
+   "fear"
+  ],
+  "emotion": "fear",
+  "word": "afraid",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey afraid?",
+  "true_emotions": [
+   "fear"
+  ],
+  "emotion": "fear",
+  "word": "afraid",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound afraid?",
+  "true_emotions": [
+   "fear"
+  ],
+  "emotion": "fear",
+  "word": "afraid",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound scared?",
+  "true_emotions": [
+   "fear"
+  ],
+  "emotion": "fear",
+  "word": "scared",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing scared?",
+  "true_emotions": [
+   "fear"
+  ],
+  "emotion": "fear",
+  "word": "scared",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey scared?",
+  "true_emotions": [
+   "fear"
+  ],
+  "emotion": "fear",
+  "word": "scared",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound scared?",
+  "true_emotions": [
+   "fear"
+  ],
+  "emotion": "fear",
+  "word": "scared",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound terrified?",
+  "true_emotions": [
+   "fear"
+  ],
+  "emotion": "fear",
+  "word": "terrified",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing terrified?",
+  "true_emotions": [
+   "fear"
+  ],
+  "emotion": "fear",
+  "word": "terrified",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey terrified?",
+  "true_emotions": [
+   "fear"
+  ],
+  "emotion": "fear",
+  "word": "terrified",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound terrified?",
+  "true_emotions": [
+   "fear"
+  ],
+  "emotion": "fear",
+  "word": "terrified",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound happy?",
+  "true_emotions": [
+   "happy"
+  ],
+  "emotion": "happy",
+  "word": "happy",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing happy?",
+  "true_emotions": [
+   "happy"
+  ],
+  "emotion": "happy",
+  "word": "happy",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey happy?",
+  "true_emotions": [
+   "happy"
+  ],
+  "emotion": "happy",
+  "word": "happy",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound happy?",
+  "true_emotions": [
+   "happy"
+  ],
+  "emotion": "happy",
+  "word": "happy",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound joyful?",
+  "true_emotions": [
+   "happy"
+  ],
+  "emotion": "happy",
+  "word": "joyful",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing joyful?",
+  "true_emotions": [
+   "happy"
+  ],
+  "emotion": "happy",
+  "word": "joyful",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey joyful?",
+  "true_emotions": [
+   "happy"
+  ],
+  "emotion": "happy",
+  "word": "joyful",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound joyful?",
+  "true_emotions": [
+   "happy"
+  ],
+  "emotion": "happy",
+  "word": "joyful",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound cheerful?",
+  "true_emotions": [
+   "happy"
+  ],
+  "emotion": "happy",
+  "word": "cheerful",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing cheerful?",
+  "true_emotions": [
+   "happy"
+  ],
+  "emotion": "happy",
+  "word": "cheerful",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey cheerful?",
+  "true_emotions": [
+   "happy"
+  ],
+  "emotion": "happy",
+  "word": "cheerful",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound cheerful?",
+  "true_emotions": [
+   "happy"
+  ],
+  "emotion": "happy",
+  "word": "cheerful",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound glad?",
+  "true_emotions": [
+   "happy"
+  ],
+  "emotion": "happy",
+  "word": "glad",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing glad?",
+  "true_emotions": [
+   "happy"
+  ],
+  "emotion": "happy",
+  "word": "glad",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey glad?",
+  "true_emotions": [
+   "happy"
+  ],
+  "emotion": "happy",
+  "word": "glad",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound glad?",
+  "true_emotions": [
+   "happy"
+  ],
+  "emotion": "happy",
+  "word": "glad",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound neutral?",
+  "true_emotions": [
+   "neutral"
+  ],
+  "emotion": "neutral",
+  "word": "neutral",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing neutral?",
+  "true_emotions": [
+   "neutral"
+  ],
+  "emotion": "neutral",
+  "word": "neutral",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey neutral?",
+  "true_emotions": [
+   "neutral"
+  ],
+  "emotion": "neutral",
+  "word": "neutral",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound neutral?",
+  "true_emotions": [
+   "neutral"
+  ],
+  "emotion": "neutral",
+  "word": "neutral",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound flat?",
+  "true_emotions": [
+   "neutral"
+  ],
+  "emotion": "neutral",
+  "word": "flat",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing flat?",
+  "true_emotions": [
+   "neutral"
+  ],
+  "emotion": "neutral",
+  "word": "flat",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey flat?",
+  "true_emotions": [
+   "neutral"
+  ],
+  "emotion": "neutral",
+  "word": "flat",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound flat?",
+  "true_emotions": [
+   "neutral"
+  ],
+  "emotion": "neutral",
+  "word": "flat",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound unemotional?",
+  "true_emotions": [
+   "neutral"
+  ],
+  "emotion": "neutral",
+  "word": "unemotional",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing unemotional?",
+  "true_emotions": [
+   "neutral"
+  ],
+  "emotion": "neutral",
+  "word": "unemotional",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey unemotional?",
+  "true_emotions": [
+   "neutral"
+  ],
+  "emotion": "neutral",
+  "word": "unemotional",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound unemotional?",
+  "true_emotions": [
+   "neutral"
+  ],
+  "emotion": "neutral",
+  "word": "unemotional",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound sad?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "emotion": "sadness",
+  "word": "sad",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing sad?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "emotion": "sadness",
+  "word": "sad",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey sad?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "emotion": "sadness",
+  "word": "sad",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound sad?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "emotion": "sadness",
+  "word": "sad",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound unhappy?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "emotion": "sadness",
+  "word": "unhappy",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing unhappy?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "emotion": "sadness",
+  "word": "unhappy",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey unhappy?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "emotion": "sadness",
+  "word": "unhappy",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound unhappy?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "emotion": "sadness",
+  "word": "unhappy",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound sorrowful?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "emotion": "sadness",
+  "word": "sorrowful",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing sorrowful?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "emotion": "sadness",
+  "word": "sorrowful",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey sorrowful?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "emotion": "sadness",
+  "word": "sorrowful",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound sorrowful?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "emotion": "sadness",
+  "word": "sorrowful",
+  "template": "To what degree does the speaker sound {w}?"
+ },
+ {
+  "text": "Does the speaker sound dejected?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "emotion": "sadness",
+  "word": "dejected",
+  "template": "Does the speaker sound {w}?"
+ },
+ {
+  "text": "Is the speaker expressing dejected?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "emotion": "sadness",
+  "word": "dejected",
+  "template": "Is the speaker expressing {w}?"
+ },
+ {
+  "text": "Does the voice of the speaker convey dejected?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "emotion": "sadness",
+  "word": "dejected",
+  "template": "Does the voice of the speaker convey {w}?"
+ },
+ {
+  "text": "To what degree does the speaker sound dejected?",
+  "true_emotions": [
+   "sadness"
+  ],
+  "emotion": "sadness",
+  "word": "dejected",
+  "template": "To what degree does the speaker sound {w}?"
+ }
+]

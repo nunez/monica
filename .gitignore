@@ -1,0 +1,10 @@
+.venv/
+*.log
+data/audio/
+
+data/raw/
+data/features/
+data/models/
+__pycache__/
+*.pyc
+.DS_Store

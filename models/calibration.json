@@ -1,0 +1,8 @@
+{
+  "method": "temperature_scaling",
+  "temperatures": {
+    "noul": 4.0,
+    "choice": 2.1633429660183516,
+    "score": 4.0
+  }
+}

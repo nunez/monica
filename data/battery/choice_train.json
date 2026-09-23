@@ -1,0 +1,140 @@
+[
+ {
+  "panel": [
+   "angry",
+   "disgust",
+   "fear",
+   "happy",
+   "neutral",
+   "sadness"
+  ],
+  "descriptions": {
+   "angry": "Anger or hostility is expressed",
+   "disgust": "Disgust or revulsion is expressed",
+   "fear": "Fear or apprehension is expressed",
+   "happy": "Happiness or enjoyment is expressed",
+   "neutral": "No strong emotion is expressed",
+   "sadness": "Sadness or dejection is expressed"
+  },
+  "tag": "0A"
+ },
+ {
+  "panel": [
+   "angry",
+   "disgust",
+   "fear",
+   "happy",
+   "neutral",
+   "sadness"
+  ],
+  "descriptions": {
+   "angry": "The voice sounds mad or aggressive",
+   "disgust": "The voice sounds repulsed",
+   "fear": "The voice sounds afraid or nervous",
+   "happy": "The voice sounds glad or pleased",
+   "neutral": "The voice sounds matter-of-fact",
+   "sadness": "The voice sounds down or sorrowful"
+  },
+  "tag": "0B"
+ },
+ {
+  "panel": [
+   "happy",
+   "sadness",
+   "angry",
+   "neutral"
+  ],
+  "descriptions": {
+   "happy": "Happiness or enjoyment is expressed",
+   "sadness": "Sadness or dejection is expressed",
+   "angry": "Anger or hostility is expressed",
+   "neutral": "No strong emotion is expressed"
+  },
+  "tag": "1A"
+ },
+ {
+  "panel": [
+   "happy",
+   "sadness",
+   "angry",
+   "neutral"
+  ],
+  "descriptions": {
+   "happy": "The voice sounds glad or pleased",
+   "sadness": "The voice sounds down or sorrowful",
+   "angry": "The voice sounds mad or aggressive",
+   "neutral": "The voice sounds matter-of-fact"
+  },
+  "tag": "1B"
+ },
+ {
+  "panel": [
+   "fear",
+   "angry",
+   "sadness"
+  ],
+  "descriptions": {
+   "fear": "Fear or apprehension is expressed",
+   "angry": "Anger or hostility is expressed",
+   "sadness": "Sadness or dejection is expressed"
+  },
+  "tag": "2A"
+ },
+ {
+  "panel": [
+   "fear",
+   "angry",
+   "sadness"
+  ],
+  "descriptions": {
+   "fear": "The voice sounds afraid or nervous",
+   "angry": "The voice sounds mad or aggressive",
+   "sadness": "The voice sounds down or sorrowful"
+  },
+  "tag": "2B"
+ },
+ {
+  "panel": [
+   "happy",
+   "neutral"
+  ],
+  "descriptions": {
+   "happy": "Happiness or enjoyment is expressed",
+   "neutral": "No strong emotion is expressed"
+  },
+  "tag": "3A"
+ },
+ {
+  "panel": [
+   "happy",
+   "neutral"
+  ],
+  "descriptions": {
+   "happy": "The voice sounds glad or pleased",
+   "neutral": "The voice sounds matter-of-fact"
+  },
+  "tag": "3B"
+ },
+ {
+  "panel": [
+   "angry",
+   "neutral"
+  ],
+  "descriptions": {
+   "angry": "Anger or hostility is expressed",
+   "neutral": "No strong emotion is expressed"
+  },
+  "tag": "4A"
+ },
+ {
+  "panel": [
+   "angry",
+   "neutral"
+  ],
+  "descriptions": {
+   "angry": "The voice sounds mad or aggressive",
+   "neutral": "The voice sounds matter-of-fact"
+  },
+  "tag": "4B"
+ }
+]
