@@ -62,6 +62,12 @@ _Choice baseline: majority-class accuracy ≈ 0.24; 6-class chance 0.167._
   (1 − H/log K), capped under low SNR/clipping (see `docs/GATE.md`).
 - **Unseen words**: noul sentiment words never seen during training
   (word-level held-out battery).
+- **Layer selection**: head checkpoints carry the layer-study selection in
+  `meta.layer_ids`; `MonicaModel` now resolves it from the checkpoint at init.
+  Before this fix the HTTP server scored with the config default (2,5,8,11)
+  instead of the trained (3,4,9,10) — all suite numbers here were computed
+  through the explicit path and were always correct; live serve responses are
+  now identical to the eval path (verified via `/probe`).
 - **Cross-corpus**: RAVDESS (research-only, never trained on) scored with the
   CREMA-trained model.
 

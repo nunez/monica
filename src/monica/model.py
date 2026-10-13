@@ -54,6 +54,15 @@ class MonicaModel:
         self.tokenizer = make_tokenizer(cfg.model_dir)
         self.emb_table = GemmaEmbeddingTable(cfg.model_dir, device=cfg.device)
         self.text_encoder = TextEncoder(emb_dim=self.emb_table.dim, out_dim=cfg.d_q).to(self.device)
+        # trained head ckpts carry the layer-study selection in meta; it is
+        # authoritative — a server built without explicit layer_ids must not
+        # fall back to defaults and score a mismatched projection
+        self._ck_cache = None
+        if cfg.ckpt and os.path.isfile(cfg.ckpt):
+            self._ck_cache = torch.load(cfg.ckpt, map_location="cpu", weights_only=False)
+            ck_layers = (self._ck_cache.get("meta") or {}).get("layer_ids")
+            if ck_layers and tuple(ck_layers) != tuple(cfg.layer_ids):
+                cfg.layer_ids = tuple(ck_layers)
         # pooled A = per-window [layer means ... final mean | layer stds ... final std]
         self.d_a = 2 * (len(cfg.layer_ids) * self.encoder.hidden + self.encoder.out_dim)
         # head stats vector = 8-dim normalized audio quality summary
@@ -80,7 +89,9 @@ class MonicaModel:
         self.trainable_params = n_train
 
     def load_head_ckpt(self, path: str):
-        ck = torch.load(path, map_location=self.device)
+        ck = self._ck_cache if (self._ck_cache is not None and path == self.cfg.ckpt) \
+            else torch.load(path, map_location="cpu")
+        self._ck_cache = None
         self.text_encoder.load_state_dict(ck["text_encoder"])
         self.heads.load_state_dict(ck["heads"])
         self.stats_mean = ck["stats_mean"].detach().clone().float().to(self.device)

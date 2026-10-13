@@ -38,6 +38,48 @@ def create_app(model: MonicaModel | None = None) -> FastAPI:
             holder["model"].warmup()
         app.state.model = holder["model"]
 
+    @app.get("/version")
+    def version():
+        import monica
+        import monica.audioio as aio
+        import monica.calibration as cal
+        import monica.encoder as enc
+        import monica.model as mdl
+        import hashlib
+        def h(p):
+            try:
+                return hashlib.md5(open(p, "rb").read()).hexdigest()[:8]
+            except Exception:
+                return None
+        cv = holder["model"].calibrator.choice_vector if holder["model"] else None
+        return {"files": {"model.py": h(os.path.join(os.path.dirname(mdl.__file__), "model.py")),
+                          "audioio.py": h(os.path.join(os.path.dirname(aio.__file__), "audioio.py")),
+                          "calibration.py": h(os.path.join(os.path.dirname(cal.__file__), "calibration.py")),
+                          "encoder.py": h(os.path.join(os.path.dirname(enc.__file__), "encoder.py"))},
+                "calib": CALIB, "device": DEVICE,
+                "n_entries": len(cv["entries"]) if cv else 0,
+                "encodes": holder["model"].n_audio_encodes if holder["model"] else -1}
+
+    @app.get("/probe")
+    def probe(path: str, desc: str = ""):
+        import numpy as np
+        m = holder["model"]
+        from .audioio import decode_audio, analyze_quality
+        raw = open(path, "rb").read()
+        wav, meta = decode_audio(raw)
+        pooled = m.audio_encode(wav)
+        pooled["_quality"] = analyze_quality(wav)
+        ans = m.score(pooled, {"q": {"type": "choice", "instructions": "What primary sentiment is expressed by the speaker's voice?",
+                                      "criteria": {"a": desc or "Anger or hostility is expressed"}}})
+        u = m.encode_texts_cached([desc or "Anger or hostility is expressed"])
+        return {"quality": {"snr": analyze_quality(wav).snr_db, "dur": len(wav) / 16000},
+                "logits": [round(float(v), 3) for v in ans["q"]["_logits"]],
+                "u_norm": round(float(u.norm()), 3),
+                "a_norm": round(float(pooled["A"].norm()), 3),
+                "a_shape": list(pooled["A"].shape)}
+
+    @app.post("/v1/systemone")
+
     @app.post("/v1/systemone")
     async def systemone(request: Request):
         body = await request.body()
