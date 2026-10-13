@@ -85,7 +85,7 @@ class MonicaModel:
         self.heads.load_state_dict(ck["heads"])
         self.stats_mean = ck["stats_mean"].detach().clone().float().to(self.device)
         self.stats_std = ck["stats_std"].detach().clone().float().to(self.device).clamp(min=1e-6)
-        if "calibration" in ck:
+        if "calibration" in ck and getattr(self, "_uncalibrated", True):
             self.calibrator = Calibrator(ck["calibration"])
             self._uncalibrated = False
 
@@ -186,7 +186,7 @@ class MonicaModel:
                 uo = opts[i][0].reshape(1, -1, self.cfg.d_q)
                 logits = self.heads.forward_pooled(z[i:i + 1], stats, uo)[0]
                 answers[n] = {"type": "choice", "_logits": logits.cpu().numpy(),
-                             "keys": list(spec["criteria"])}
+                             "keys": list(spec["criteria"]), "descs": list(spec["criteria"].values())}
             elif t == "score":
                 uo = opts[i][0].reshape(1, -1, self.cfg.d_q)
                 k = uo.shape[1]
@@ -218,7 +218,8 @@ class MonicaModel:
                     p = 1.0 / (1.0 + math.exp(-x))
                 answers[name] = {"type": "noul", "noul": round(p, 4)}
             elif a["type"] == "choice":
-                probs = self._calib_probs(a["_logits"], "choice", low_information)
+                probs = self._calib_probs(a["_logits"], "choice", low_information,
+                                          descs=a.get("descs"))
                 probs = _round_probs(probs)
                 k = len(probs)
                 conf = 0.0 if low_information else round(self._cap_conf(_negentropy(probs), quality), 4)
@@ -261,15 +262,18 @@ class MonicaModel:
             },
             "calibration": {
                 "status": "uncalibrated" if self._uncalibrated else "calibrated",
-                "method": "none" if self._uncalibrated else "temperature_scaling",
+                "method": "none" if self._uncalibrated else self.calibrator.method,
             },
         }
         return resp
 
-    def _calib_probs(self, logits: np.ndarray, kind: str, low_info: bool) -> np.ndarray:
+    def _calib_probs(self, logits: np.ndarray, kind: str, low_info: bool,
+                     keys=None, descs=None) -> np.ndarray:
         if low_info:
             k = len(logits)
             return np.full(k, 1.0 / k)
+        if kind == "choice" and self.calibrator.choice_vector and descs is not None:
+            return self.calibrator.apply_choice(logits, descs)
         t = self.calibrator.temps.get(kind, 1.0)
         e = np.exp((logits - logits.max()) / t)
         return e / e.sum()

@@ -8,3 +8,7 @@ data/models/
 __pycache__/
 *.pyc
 .DS_Store
+.venv-eg2/
+server.pid
+*.bak
+bench/*.pt

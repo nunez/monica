@@ -1,0 +1,137 @@
+{
+  "anchor_desc_raw_t10": {
+    "n": 978,
+    "acc": 0.1656,
+    "macro_f1": 0.1143,
+    "ece": 0.0013,
+    "brier": 0.8333,
+    "per_class_precision": {
+      "angry": 0.0,
+      "disgust": 0.155,
+      "fear": 0.172,
+      "happy": 0.22,
+      "neutral": 0.0,
+      "sadness": 0.368
+    }
+  },
+  "anchor_desc_valfit": {
+    "tau": 1.128,
+    "n": 978,
+    "acc": 0.1656,
+    "macro_f1": 0.1143,
+    "ece": 0.0038,
+    "brier": 0.8333,
+    "per_class_precision": {
+      "angry": 0.0,
+      "disgust": 0.155,
+      "fear": 0.172,
+      "happy": 0.22,
+      "neutral": 0.0,
+      "sadness": 0.368
+    }
+  },
+  "anchor_simple_valfit": {
+    "tau": 1.041,
+    "n": 978,
+    "acc": 0.1605,
+    "macro_f1": 0.0797,
+    "ece": 0.0119,
+    "brier": 0.8332,
+    "per_class_precision": {
+      "angry": 1.0,
+      "disgust": 0.128,
+      "fear": 0.188,
+      "happy": 0.304,
+      "neutral": 0.153,
+      "sadness": 1.0
+    }
+  },
+  "head": {
+    "n": 978,
+    "acc": 0.6084,
+    "macro_f1": 0.6003,
+    "ece": 0.1213,
+    "brier": 0.5848,
+    "per_class_precision": {
+      "angry": 0.821,
+      "disgust": 0.732,
+      "fear": 0.612,
+      "happy": 0.635,
+      "neutral": 0.608,
+      "sadness": 0.476
+    }
+  },
+  "head_val": {
+    "n": 896,
+    "acc": 0.5893,
+    "macro_f1": 0.585,
+    "ece": 0.1042,
+    "brier": 0.5879,
+    "per_class_precision": {
+      "angry": 0.841,
+      "disgust": 0.8,
+      "fear": 0.58,
+      "happy": 0.631,
+      "neutral": 0.516,
+      "sadness": 0.472
+    }
+  },
+  "agreement": {
+    "js": 0.0967,
+    "mean_max_prob_delta": 0.33,
+    "argmax_agreement": 0.1258
+  },
+  "per_emotion_spearman_cos_vs_logit": {
+    "angry": 0.066,
+    "disgust": 0.061,
+    "fear": 0.048,
+    "happy": 0.032,
+    "neutral": 0.107,
+    "sadness": 0.185
+  },
+  "stack_head_only": {
+    "n": 978,
+    "acc": 0.684,
+    "macro_f1": 0.6829,
+    "ece": 0.0385,
+    "brier": 0.4658,
+    "per_class_precision": {
+      "angry": 0.734,
+      "disgust": 0.673,
+      "fear": 0.722,
+      "happy": 0.749,
+      "neutral": 0.722,
+      "sadness": 0.55
+    }
+  },
+  "stack_anchor_only": {
+    "n": 978,
+    "acc": 0.2117,
+    "macro_f1": 0.136,
+    "ece": 0.0317,
+    "brier": 0.8241,
+    "per_class_precision": {
+      "angry": 0.211,
+      "disgust": 0.2,
+      "fear": 0.277,
+      "happy": 0.125,
+      "neutral": 0.0,
+      "sadness": 0.215
+    }
+  },
+  "stack_both": {
+    "n": 978,
+    "acc": 0.6789,
+    "macro_f1": 0.6774,
+    "ece": 0.0346,
+    "brier": 0.4632,
+    "per_class_precision": {
+      "angry": 0.726,
+      "disgust": 0.679,
+      "fear": 0.709,
+      "happy": 0.754,
+      "neutral": 0.692,
+      "sadness": 0.547
+    }
+  }
+}

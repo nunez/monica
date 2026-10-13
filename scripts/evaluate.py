@@ -139,7 +139,11 @@ def main():
                 lg = np.asarray(ans[f"c{i}"]["_logits"], dtype=np.float64)
                 if len(lg) != 6:
                     continue
-                p = softmax_t(lg, temps.get("choice", 1.0))
+                if getattr(model.calibrator, "choice_vector", None):
+                    p = model._calib_probs(lg, "choice", False, keys=pl["panel"],
+                                           descs=[pl["descriptions"][k] for k in pl["panel"]])
+                else:
+                    p = softmax_t(lg, temps.get("choice", 1.0))
                 probs_all.append(p); labels_all.append(pl["panel"].index(emo)); n_tested += 1
         P = np.array(probs_all); L = np.array(labels_all)
         return {"n": n_tested, "acc": round(accuracy(P.argmax(-1), L), 4),

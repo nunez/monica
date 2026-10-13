@@ -1,8 +1,130 @@
 {
-  "method": "temperature_scaling",
+  "method": "vector_scaling+temperature_fallback",
   "temperatures": {
     "noul": 4.0,
     "choice": 2.1633429660183516,
     "score": 4.0
+  },
+  "choice_vector": {
+    "entries": [
+      {
+        "emotion": "angry",
+        "desc": "Anger or hostility is expressed",
+        "u": -2.544992685317993,
+        "b": -0.8152836561203003
+      },
+      {
+        "emotion": "disgust",
+        "desc": "Disgust or revulsion is expressed",
+        "u": -0.47093647718429565,
+        "b": 1.3072404861450195
+      },
+      {
+        "emotion": "fear",
+        "desc": "Fear or apprehension is expressed",
+        "u": -0.23539187014102936,
+        "b": 0.5402335524559021
+      },
+      {
+        "emotion": "happy",
+        "desc": "Happiness or enjoyment is expressed",
+        "u": -0.12348517030477524,
+        "b": -0.01920819655060768
+      },
+      {
+        "emotion": "neutral",
+        "desc": "No strong emotion is expressed",
+        "u": 0.03733048588037491,
+        "b": 0.45686832070350647
+      },
+      {
+        "emotion": "sadness",
+        "desc": "Sadness or dejection is expressed",
+        "u": -0.42782291769981384,
+        "b": -0.3783702552318573
+      },
+      {
+        "emotion": "angry",
+        "desc": "The voice sounds mad or aggressive",
+        "u": -3.154066801071167,
+        "b": -0.833945095539093
+      },
+      {
+        "emotion": "disgust",
+        "desc": "The voice sounds repulsed",
+        "u": -0.610721230506897,
+        "b": 1.294248342514038
+      },
+      {
+        "emotion": "fear",
+        "desc": "The voice sounds afraid or nervous",
+        "u": -0.3729219138622284,
+        "b": 0.403368204832077
+      },
+      {
+        "emotion": "happy",
+        "desc": "The voice sounds glad or pleased",
+        "u": -0.44170883297920227,
+        "b": -0.16937637329101562
+      },
+      {
+        "emotion": "neutral",
+        "desc": "The voice sounds matter-of-fact",
+        "u": -1.0499532222747803,
+        "b": -0.14020080864429474
+      },
+      {
+        "emotion": "sadness",
+        "desc": "The voice sounds down or sorrowful",
+        "u": -0.5355464816093445,
+        "b": -0.30095311999320984
+      }
+    ],
+    "fit": {
+      "grid": [
+        {
+          "tag": "0A",
+          "panel": [
+            "angry",
+            "disgust",
+            "fear",
+            "happy",
+            "neutral",
+            "sadness"
+          ],
+          "l2": 1e-05,
+          "cv_nll": {
+            "1e-05": 1.09816,
+            "0.0001": 1.09823,
+            "0.001": 1.09911,
+            "0.01": 1.10916,
+            "0.03": 1.12836,
+            "0.1": 1.18539
+          },
+          "n_val_windows": 1579
+        },
+        {
+          "tag": "0B",
+          "panel": [
+            "angry",
+            "disgust",
+            "fear",
+            "happy",
+            "neutral",
+            "sadness"
+          ],
+          "l2": 1e-05,
+          "cv_nll": {
+            "1e-05": 1.18912,
+            "0.0001": 1.18926,
+            "0.001": 1.19081,
+            "0.01": 1.20684,
+            "0.03": 1.2405,
+            "0.1": 1.32955
+          },
+          "n_val_windows": 1579
+        }
+      ]
+    }
   }
 }

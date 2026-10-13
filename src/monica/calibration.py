@@ -1,6 +1,12 @@
 """Calibration: temperature scaling per output head, fitted on held-out
 speaker-independent validation data. Reports ECE / Brier / RPS.
 
+Choice additionally supports identity-keyed VECTOR scaling: a (gain, bias)
+pair registered per exact option criterion TEXT (per-option logits are
+conditioned on the option text, so calibration must be keyed by that text),
+applied when an option's description matches a registered entry; other slots
+fall back to plain temperature inside the same softmax.
+
 `confidence` fields are distribution concentration (1 - H(p)/log K), NOT a
 verified accuracy probability; calibration applies to probability values.
 """
@@ -89,9 +95,47 @@ def brier_ordinal_soft(probs: np.ndarray, soft_labels: np.ndarray) -> float:
 
 
 class Calibrator:
-    def __init__(self, temps: dict):
+    def __init__(self, temps: dict, choice_vector: dict | None = None):
         # temps: {"noul": t, "choice": t, "score": t}
+        # choice_vector: {"entries": [{"emotion": e, "desc": text, "u": g, "b": b}, ...]}
         self.temps = temps
+        self.choice_vector = self._validated_vector(choice_vector)
+
+    @staticmethod
+    def _validated_vector(cv):
+        if not cv or "entries" not in cv:
+            return None
+        ents = [e for e in cv["entries"]
+                if all(k in e for k in ("emotion", "desc", "u", "b")) and e.get("desc")]
+        return {"entries": ents, "fit": cv.get("fit", {})} if ents else None
+
+    @property
+    def method(self) -> str:
+        return "vector_scaling+temperature_fallback" if self.choice_vector else "temperature_scaling"
+
+    def choice_slot_params(self, descs):
+        """Per-slot (gain, bias) so probs = softmax(gain*l + bias).
+        A slot matches a registered entry on exact normalized criterion text;
+        unmatched slots keep 1/T with zero bias."""
+        t = self.temps.get("choice", 1.0)
+        g = np.full(len(descs), 1.0 / t)
+        bi = np.zeros(len(descs))
+        if not self.choice_vector:
+            return g, bi
+        by_desc = {str(e["desc"]).strip().lower(): e for e in self.choice_vector["entries"]}
+        for j, desc in enumerate(descs):
+            e = by_desc.get(str(desc).strip().lower()) if desc is not None else None
+            if e is not None:
+                g[j] = float(np.exp(e["u"]))
+                bi[j] = float(e["b"])
+        return g, bi
+
+    def apply_choice(self, logits: np.ndarray, descs) -> np.ndarray:
+        logits = np.asarray(logits, dtype=np.float64)
+        g, bi = self.choice_slot_params(descs)
+        x = logits * g + bi
+        e = np.exp(x - x.max(-1, keepdims=True))
+        return e / e.sum(-1, keepdims=True)
 
     def apply(self, kind: str, probs: np.ndarray) -> np.ndarray:
         return softmax(np.log(np.clip(probs, 1e-9, 1.0)) / self.temps.get(kind, 1.0))
@@ -128,8 +172,12 @@ class Calibrator:
         return cls(temps), metrics
 
     def save(self, path: str):
-        json.dump({"method": "temperature_scaling", "temperatures": self.temps}, open(path, "w"), indent=2)
+        out = {"method": self.method, "temperatures": self.temps}
+        if self.choice_vector:
+            out["choice_vector"] = self.choice_vector
+        json.dump(out, open(path, "w"), indent=2)
 
     @classmethod
     def load(cls, path: str) -> "Calibrator":
-        return cls(json.load(open(path))["temperatures"])
+        d = json.load(open(path))
+        return cls(d["temperatures"], d.get("choice_vector"))

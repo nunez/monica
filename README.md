@@ -125,7 +125,9 @@ of question count.
   speech return prior answers with `low_information: true` and `confidence: 0`
   without spending an encode. Low-SNR inputs have their confidence capped.
 - **Calibrated probabilities.** Temperature scaling per question type, fitted
-  on held-out speakers; `confidence` is normalized negentropy of the answer
+  on held-out speakers; choice additionally uses identity-keyed vector scaling
+  registered per exact option criterion text (unknown text falls back to
+  temperature). `confidence` is normalized negentropy of the answer
   distribution.
 
 ## Pipeline

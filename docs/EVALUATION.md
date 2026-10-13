@@ -11,7 +11,7 @@ version: `bench/eval_results.json`.
 |---|---|
 | noul, seen words (n=151,360) | acc 0.873, AUC 0.850, ECE 0.069 |
 | noul, **unseen** words (n=41,280) | acc 0.839, AUC 0.803, ECE 0.037 |
-| choice (6-emotion, n=3,440) | acc 0.591, macro-F1 0.584, ECE 0.101 |
+| choice (6-emotion, n=3,440) | acc 0.656, macro-F1 0.655, ECE 0.068 |
 | RAVDESS cross-corpus, unseen words | acc 0.832 (chance 0.5), ECE 0.134 |
 
 ## Score questions (ordinal)
@@ -53,6 +53,11 @@ _Choice baseline: majority-class accuracy ≈ 0.24; 6-class chance 0.167._
   encoder + decision heads (~52 M trainable params) are trained.
 - **Calibration**: per-question-type temperature scaling fitted on the val
   speakers' held-out split; ECE measured before/after on test.
+- **Choice vector scaling**: identity-keyed per-option-text affine scaling
+  (`softmax(exp(u_e)·l_e + b_e)`) registered per exact criterion text, fitted
+  on the val split with speaker-grouped CV selecting L2 (test never consulted);
+  unmatched option text falls back to plain temperature inside the same softmax.
+  Lifts choice 0.591 → 0.656 test, ECE 0.101 → 0.068 (`bench/vector_calib.md`).
 - **Confidence**: normalized negentropy of the calibrated answer distribution
   (1 − H/log K), capped under low SNR/clipping (see `docs/GATE.md`).
 - **Unseen words**: noul sentiment words never seen during training

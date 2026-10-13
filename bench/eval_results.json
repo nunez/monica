@@ -80,11 +80,11 @@
   },
   "choice_test": {
     "n": 3440,
-    "acc": 0.5913,
-    "macro_f1": 0.5841,
-    "nll": 1.3516,
-    "brier": 0.6041,
-    "ece": 0.1014
+    "acc": 0.6558,
+    "macro_f1": 0.6554,
+    "nll": 1.1033,
+    "brier": 0.5136,
+    "ece": 0.068
   },
   "choice_order_stability": {
     "n_orders": 7,
@@ -158,28 +158,28 @@
       "low_info_rate": 0.0,
       "music_rate": 0.0,
       "max_noul_scored": 0.329,
-      "max_choice_conf": 0.268
+      "max_choice_conf": 0.817
     },
     "babble_20": {
       "n": 8,
       "low_info_rate": 0.0,
       "music_rate": 0.0,
       "max_noul_scored": 0.257,
-      "max_choice_conf": 0.505
+      "max_choice_conf": 0.869
     },
     "babble_5": {
       "n": 8,
       "low_info_rate": 0.0,
       "music_rate": 0.0,
       "max_noul_scored": 0.329,
-      "max_choice_conf": 0.6
+      "max_choice_conf": 0.716
     },
     "clipped": {
       "n": 8,
       "low_info_rate": 0.25,
       "music_rate": 0.0,
       "max_noul_scored": 0.5,
-      "max_choice_conf": 0.719
+      "max_choice_conf": 0.899
     },
     "music": {
       "n": 1,
@@ -193,7 +193,7 @@
       "low_info_rate": 0.0,
       "music_rate": 0.0,
       "max_noul_scored": 0.407,
-      "max_choice_conf": 0.433
+      "max_choice_conf": 0.861
     },
     "short_0.4s": {
       "n": 8,
@@ -215,11 +215,11 @@
       "stereo16_noul": 0.0,
       "stereo16_dist": 0.0,
       "sr48k_noul": 0.0541,
-      "sr48k_dist": 0.04793,
+      "sr48k_dist": 0.08305,
       "sr22k_noul": 0.04683,
-      "sr22k_dist": 0.04913,
+      "sr22k_dist": 0.08592,
       "sr8k_noul": 0.09654,
-      "sr8k_dist": 0.03445,
+      "sr8k_dist": 0.04692,
       "mono24_noul": 0.0,
       "mono24_dist": 0.0,
       "float_noul": 0.0,
@@ -234,30 +234,30 @@
     "audio_encode_ms": {
       "3.0": {
         "n": 5,
-        "mean_ms": 53.0,
-        "median_ms": 49.6,
-        "p90_ms": 59.9,
-        "p99_ms": 65.7,
-        "min_ms": 49.2,
-        "max_ms": 66.4
+        "mean_ms": 63.4,
+        "median_ms": 50.3,
+        "p90_ms": 90.5,
+        "p99_ms": 114.5,
+        "min_ms": 49.1,
+        "max_ms": 117.1
       },
       "10.0": {
         "n": 5,
-        "mean_ms": 75.5,
+        "mean_ms": 80.8,
         "median_ms": 60.2,
-        "p90_ms": 106.6,
-        "p99_ms": 134.3,
-        "min_ms": 59.8,
-        "max_ms": 137.4
+        "p90_ms": 122.4,
+        "p99_ms": 159.7,
+        "min_ms": 59.7,
+        "max_ms": 163.9
       },
       "30.0": {
         "n": 5,
-        "mean_ms": 95.6,
-        "median_ms": 89.8,
-        "p90_ms": 107.4,
-        "p99_ms": 117.9,
-        "min_ms": 89.4,
-        "max_ms": 119.0
+        "mean_ms": 137.5,
+        "median_ms": 89.7,
+        "p90_ms": 233.4,
+        "p99_ms": 319.3,
+        "min_ms": 89.2,
+        "max_ms": 328.8
       }
     },
     "audio_seconds": [
@@ -266,18 +266,18 @@
       30.0
     ],
     "rtf_encode": {
-      "3.0": 0.0177,
-      "10.0": 0.0076,
-      "30.0": 0.0032
+      "3.0": 0.0211,
+      "10.0": 0.0081,
+      "30.0": 0.0046
     },
     "scoring_ms": {
       "q1": {
         "n": 15,
-        "mean_ms": 2.1,
+        "mean_ms": 2.0,
         "median_ms": 1.9,
-        "p90_ms": 2.8,
+        "p90_ms": 2.6,
         "p99_ms": 2.9,
-        "min_ms": 1.8,
+        "min_ms": 1.7,
         "max_ms": 2.9
       },
       "q10": {
@@ -286,17 +286,17 @@
         "median_ms": 5.4,
         "p90_ms": 6.3,
         "p99_ms": 6.6,
-        "min_ms": 5.2,
-        "max_ms": 6.6
+        "min_ms": 4.9,
+        "max_ms": 6.7
       },
       "q32": {
         "n": 15,
-        "mean_ms": 36.0,
-        "median_ms": 45.3,
-        "p90_ms": 52.0,
-        "p99_ms": 53.0,
-        "min_ms": 14.0,
-        "max_ms": 53.1
+        "mean_ms": 16.8,
+        "median_ms": 13.8,
+        "p90_ms": 14.9,
+        "p99_ms": 50.6,
+        "min_ms": 13.3,
+        "max_ms": 56.4
       }
     }
   },
